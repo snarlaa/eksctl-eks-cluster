@@ -1,11 +1,17 @@
 apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 metadata:
-  name: eksCluster
+  name: eksCluster1
   region: us-east-1
 
 managedNodeGroups:
-  - name: nodeGroup1
+  - name: nodeGroup2
     instanceType: t2.medium
     desiredCapacity: 3
     volumeSize: 20
+    tags:
+      nodegroup-role: worker
+    iam:
+      withAddonPolicies:
+        externalDNS: true
+        certManager: true
