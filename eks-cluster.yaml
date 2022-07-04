@@ -4,7 +4,7 @@ metadata:
   name: eks-cluster-1
   region: us-east-1
 
-nodeGroups:
+managedNodeGroups:
   - name: app-group
     instanceType: t2.medium
     desiredCapacity: 3
