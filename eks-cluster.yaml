@@ -1,25 +1,13 @@
 apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
-
 metadata:
-  name: eks-cluster
+  name: eks-cluster-1
   region: us-east-1
-  version: "1.22"
-
-vpc:
-  subnets:
-    private:
-      us-east-1b: { id: subnet-0c0a4ce83a1f23717 }
-      us-east-1a: { id: subnet-066c329101de1b49a }
 
 nodeGroups:
-  - name: nodegroup-workers
-    labels: { role: workers }
+  - name: app-group
     instanceType: t2.medium
-    minSize: 3
-    maxSize: 6
-    privateNetworking: true
-    iam:
-      withAddonPolicies:
-        imageBuilder: true
-
+    desiredCapacity: 3
+    volumeSize: 20
+    ssh:
+      allow: true # will use ~/.ssh/id_rsa.pub as the default ssh key
