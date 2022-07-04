@@ -9,5 +9,3 @@ nodeGroups:
     instanceType: t2.medium
     desiredCapacity: 3
     volumeSize: 20
-    ssh:
-      allow: true # will use ~/.ssh/id_rsa.pub as the default ssh key
