@@ -5,7 +5,7 @@ metadata:
   region: us-east-2
 
 nodeGroups:
-  - name: nodeGroup2
+  - name: nodeGroup
     instanceType: t2.medium
     desiredCapacity: 3
     volumeSize: 80
