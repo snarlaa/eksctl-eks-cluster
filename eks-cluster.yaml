@@ -16,5 +16,4 @@ nodeGroups:
         externalDNS: true
         certManager: true
     ssh:
-      allow: true
       publicKeyPath: "/home/ec2-user/.ssh/ec2_id_rsa.pub"
