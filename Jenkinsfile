@@ -11,7 +11,7 @@ pipeline {
 
     stages {
         
-        stage("EKS cluster create") {
+        stage("EKS cluster build or create") {
           steps {
               script {
                sh '''
